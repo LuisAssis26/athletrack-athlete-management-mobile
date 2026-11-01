@@ -44,7 +44,7 @@ AthleTrack is a mobile-first training, attendance, and events companion designed
    - For a signed release APK use `Build > Generate Signed Bundle / APK` and provide your keystore.
 
 ## Running the Backend
-1. Copy `backend/src/main/resources/.env` to the project root (or export the variables in your shell) and update `DB_URL`, `DB_USERNAME`, and `DB_PASSWORD` with your PostgreSQL credentials. **Rotate or replace the committed sample values before deploying.**
+1. Copy `backend/src/main/resources/.env.example` to `backend/src/main/resources/.env` (git-ignored) and fill in `DB_URL`, `DB_USERNAME` and `DB_PASSWORD` with your PostgreSQL credentials. Spring loads it automatically; real environment variables (e.g. on Render) take precedence.
 2. From the `backend/` directory run the service:
    ```bash
    ./gradlew bootRun
